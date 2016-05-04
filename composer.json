@@ -1,0 +1,34 @@
+{
+    "name": "colee/yii2-aliyun-mns",
+    "type": "library",
+    "description": "Aliyun MNS library for Yii2 framework",
+    "keywords": [
+        "yii2",
+        "colee",
+        "Aliyun",
+        "Aliyun SDK",
+        "mns",
+        "yii2-aliyun-mns",
+        "widget"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/colee1985/yii2-aliyun-mns",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "colee",
+            "email": "5969226@qq.com",
+            "issues": "https://github.com/colee1985/yii2-aliyun-mns/issues?state=open",
+        	"source": "https://github.com/colee1985/yii2-aliyun-mns"
+        }
+    ],
+    "require": {
+        "php" : "~5.5|~7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "colee\\aliyun\\": ""
+        }
+    }
+}
+
