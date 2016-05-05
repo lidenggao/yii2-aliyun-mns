@@ -43,7 +43,7 @@ class HttpClient
             ]
         ]);
         $this->securityToken = $securityToken;
-        $this->endpoint = $endpoint;
+        $this->endpoint = $endPoint;
         $this->parseEndpoint();
     }
 
