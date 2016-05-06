@@ -75,9 +75,8 @@ class Mns extends Component
      * @param object $messageObject 消息实体
      * @return \AliyunMNS\Responses\ReceiveMessageResponse
      */
-    public function deleteMessage($messageObject)
+    public function deleteMessage($queueName, $messageObject)
     {
-        $queueName = $messageObject->getQueueName();
         $queue = $this->client->getQueueRef($queueName);
         $receiptHandle = $messageObject->getReceiptHandle();
         return $queue->deleteMessage($receiptHandle);
