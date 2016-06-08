@@ -52,8 +52,10 @@ class Mns extends Component
      */
     public function sendMessage($queueName, $messageBody)
     {
+        if (!is_string($messageBody)){
+            $messageBody = json_encode($messageBody);
+        }
         $queue = $this->client->getQueueRef($queueName);
-        $bodyMD5 = md5(base64_encode($messageBody));
         $request = new SendMessageRequest($messageBody);
         return $queue->sendMessage($request);
     }
@@ -91,8 +93,10 @@ class Mns extends Component
      */
     public function publishMessage($topicName, $messageBody)
     {
+        if (!is_string($messageBody)){
+            $messageBody = json_encode($messageBody);
+        }
         $topic = $this->client->getTopicRef($topicName);
-        $bodyMD5 = md5(base64_encode($messageBody));
         $request = new PublishMessageRequest($messageBody);
         
         return $topic->publishMessage($request);
